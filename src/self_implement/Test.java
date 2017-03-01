@@ -1,3 +1,5 @@
+package self_implement;
+
 /**
  * Created by root on 11/17/16.
  */
@@ -31,7 +33,7 @@ class Consumer implements Runnable {
         try {
             while(true) {
                 queue.remove(queue.element());
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             }
         }
         catch (InterruptedException e) {
@@ -49,7 +51,7 @@ class Traverser implements Runnable {
         try {
             while(true) {
                 queue.print();
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }
         }
         catch (InterruptedException e) {
