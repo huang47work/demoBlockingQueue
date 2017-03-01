@@ -14,7 +14,6 @@ public class BlockingQueueDemo {
         }
 
         private void go() {
-            // 这里简单的说一下BlockingQueue的实现,它基于生产者-消费者模式，其中有两个重要的阻塞方法
             // put()和take()，而这两个方法的实现用到了Lock和Condition，具体实现请参考API
             BlockingQueue<String> queue = new ArrayBlockingQueue<String>(10);
             Thread t1 = new Thread(new Producer(queue, 5000, "peak")); // 生产者线程,来，生产一些i
